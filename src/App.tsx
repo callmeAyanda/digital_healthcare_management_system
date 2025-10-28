@@ -1,5 +1,4 @@
-import { Authenticated, Unauthenticated, useQuery } from "convex/react";
-import { api } from "../convex/_generated/api";
+// TODO: Replace Convex auth/data with Next.js data fetching and auth
 import { SignInForm } from "./SignInForm";
 import { SignOutButton } from "./SignOutButton";
 import { Toaster } from "sonner";
@@ -58,15 +57,15 @@ function Content() {
         {!patientProfile && !providerProfile && !userType && (
           <ProfileSetup onUserTypeSelect={setUserType} />
         )}
-        
+
         {(patientProfile || userType === "patient") && (
           <PatientDashboard />
         )}
-        
+
         {(providerProfile || userType === "provider") && (
           <ProviderDashboard />
         )}
-        
+
         {userType === "admin" && (
           <AdminDashboard />
         )}
