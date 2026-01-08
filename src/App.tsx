@@ -8,7 +8,7 @@ import PatientDashboard from "./components/PatientDashboard";
 import ProviderDashboard from "./components/ProviderDashboard";
 import AdminDashboard from "./components/AdminDashboard";
 import ProfileSetup from "./components/ProfileSetup";
- 
+
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
